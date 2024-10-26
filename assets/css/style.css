@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    transition: 0.3s ease;
 }
 
 :root {
@@ -16,17 +18,23 @@
 html {
     scroll-behavior: smooth;
     scroll-padding: 5rem;
+
+    min-height: 100%;
 }
 
 body {
     background-color: var(--md-sys-color-surface);
+    display: flex;
+    flex-flow: column;
+
+    min-height: 100%;
 }
 
 label {
     cursor: pointer;
 }
 
-#integrantes p {
+#sobre p {
     margin-block: 0.5rem;
 }
 
@@ -40,9 +48,10 @@ label {
     height: 2rem;
 }
 
-main {
+#render {
     display: flex;
     flex-flow: column;
+    flex-grow: 1;
     gap: 2.5rem;
 
     margin-top: 2rem;
@@ -56,7 +65,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--nav-height);
+    min-height: var(--nav-height);
+    max-height: var(--nav-height);
     background-color: var(--md-sys-color-surface-container-low);
 
     border-bottom: 1px solid var(--md-sys-color-outline);
@@ -94,6 +104,10 @@ main {
     }
 }
 
+.nav-item.hashed {
+    background-color: var(--md-sys-color-surface-container-highest);
+}
+
 #settings-item svg {
     vertical-align: sub;
 }
@@ -105,7 +119,6 @@ main {
     width: 14rem;
     overflow: hidden;
     display: none;
-    /* animation: fade-in 0.3s; */
 
     background-color: var(--md-sys-color-surface-container-low);
     border-radius: 0 0 0.5rem 0.5rem;
@@ -157,7 +170,7 @@ main {
     border-bottom: 1px solid var(--md-sys-color-outline);
 }
 
-#integrantes > .separator {
+#sobre > .separator {
     width: 90%;
     margin: auto;
     border-color: #fff;
@@ -210,7 +223,7 @@ main {
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
 
-    background-color: var(--md-sys-color-surface-container-lowest);
+    /* background-color: var(--md-sys-color-surface-container-lowest); */
 }
 
 img.profile {
@@ -218,6 +231,15 @@ img.profile {
     width: 100%;
 
     object-fit: cover;
+
+    & + figcaption {
+        width: 100%;
+        text-align: center;
+
+        color: var(--md-sys-color-on-primary);
+
+        background-color: var(--md-sys-color-primary);
+    }
 }
 
 #theme-mode {
@@ -398,7 +420,7 @@ footer {
 
     margin-top: 3rem;
     width: 100%;
-    height: 10rem;
+    min-height: 10rem;
 
     background-color: var(--md-sys-color-surface-container-low);
     box-shadow: var(--box-shadow);

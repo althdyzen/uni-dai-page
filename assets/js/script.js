@@ -1,9 +1,50 @@
+const render = document.getElementById('render');
+const pages = [
+    {
+        type: 'sobre',
+        path: 'assets/pages/sobre.html',
+    },
+    {
+        type: 'galeria',
+        path: 'assets/pages/galeria.html',
+    },
+    {
+        type: 'contato',
+        path: 'assets/pages/contato.html',
+    },
+];
+
+const getHash = () => window.location.hash.substring(1);
+
+const isLight = () => localStorage.getItem('lightMode');
+
+const setLight = () => {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+
+    localStorage.setItem('lightMode', '1');
+};
+
+const setDark = () => {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+
+    localStorage.removeItem('lightMode');
+};
+
+const showSucessPopup = () => {
+    document.body.classList.add('submitShow');
+
+    setTimeout(() => {
+        document.body.classList.remove('submitShow');
+    }, 1500);
+};
+
 const detectTheme = () => {
-    const lightMode = localStorage.getItem('lightMode');
+    const lightMode = isLight();
 
     if (lightMode) {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
+        setLight();
     }
 };
 detectTheme();
@@ -20,23 +61,17 @@ const detectScale = () => {
 detectScale();
 
 const changeTheme = () => {
-    const themeButton = document.getElementById('theme');
+    const themeButton = document.getElementById('theme-item');
 
-    if (themeButton) {
-        themeButton.addEventListener('change', (ev) => {
-            if (themeButton.checked) {
-                document.documentElement.classList.add('dark');
-                document.documentElement.classList.remove('light');
+    themeButton?.addEventListener('click', (ev) => {
+        const lightSelected = isLight();
 
-                localStorage.removeItem('lightMode');
-            } else {
-                document.documentElement.classList.remove('dark');
-                document.documentElement.classList.add('light');
-
-                localStorage.setItem('lightMode', '1');
-            }
-        });
-    }
+        if (lightSelected) {
+            setDark();
+        } else {
+            setLight();
+        }
+    });
 };
 changeTheme();
 
@@ -48,16 +83,10 @@ const contactOnSubmit = () => {
             ev.preventDefault();
             formContact.reset();
 
-            document.body.classList.add('submitShow');
-
-            setTimeout(() => {
-                document.body.classList.remove('submitShow');
-            }, 1500);
+            showSucessPopup();
         });
-        console.log(formContact);
     }
 };
-contactOnSubmit();
 
 const renderItem = (array) => array.map((item) => `<li>${item}</li>`).join('\n');
 
@@ -102,14 +131,12 @@ const renderMember = (props) => {
 
 const renderMembers = () => {
     const members = window.members;
-    const container = document.getElementById('integrantes');
+    const container = document.getElementById('sobre');
 
     if (container) {
         members.forEach((member) => {
             container.insertAdjacentHTML('beforeend', renderMember(member));
         });
-
-        console.log('Members loaded');
     }
 };
 renderMembers();
@@ -120,7 +147,6 @@ const scaleControl = () => {
 
     fontControl.addEventListener('click', (ev) => {
         let fontSize;
-        console.log(ev, ev.target);
 
         if (ev.target.closest('.lucide-plus')) {
             fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) + 2;
@@ -143,11 +169,58 @@ scaleControl();
 const settingsToggle = () => {
     const settings = document.getElementById('settings-item');
 
-    if (settings) {
-        settings.addEventListener('click', (ev) => {
-            ev.preventDefault();
+    settings.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        if (!ev.target.closest('#settings-menu')) {
             document.body.classList.toggle('settingsShow');
-        });
-    }
+        }
+    });
 };
 settingsToggle();
+
+const hashLink = () => {
+    const navLinks = document.querySelectorAll('.nav-item');
+
+    navLinks.forEach((navLink) => {
+        if (getHash() === navLink.hash.substring(1)) {
+            navLink.classList.add('hashed');
+        } else {
+            navLink.classList.remove('hashed');
+        }
+    });
+};
+
+const changePage = () => {
+    const pageType = getHash();
+    const pageUse = pages.find((page) => page.type === pageType);
+
+    if (pageUse) {
+        render.innerHTML = pageUse.html;
+
+        if (pageUse.type === 'contato') {
+            contactOnSubmit();
+        }
+
+        hashLink();
+    } else {
+        render.innerHTML = '<h1>Página não encontrada</h1>';
+    }
+
+    if (getHash() === '') {
+        render.innerHTML = pages[0].html;
+    }
+};
+
+const loadPages = async () => {
+    const promises = pages.map(async (page, i) => {
+        const res = await fetch(page.path);
+        const resText = await res.text();
+        pages[i].html = resText;
+    });
+
+    await Promise.all(promises);
+    changePage();
+};
+loadPages();
+
+window.addEventListener('hashchange', changePage);

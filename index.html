@@ -13,7 +13,7 @@
         <nav id="nav">
             <ul>
                 <li>
-                    <a class="nav-item" href="#integrantes">Sobre</a>
+                    <a class="nav-item" href="#sobre">Sobre</a>
                 </li>
                 <li>
                     <a class="nav-item" href="#galeria">Galeria</a>
@@ -26,7 +26,7 @@
                         <input type="checkbox" name="settings" id="settings" hidden />
                         <div id="settings-menu">
                             <ul>
-                                <li>
+                                <li id="theme-item">
                                     <div id="theme-mode">
                                         <input type="checkbox" name="theme" id="theme" hidden checked />
                                         <label for="theme">
@@ -70,150 +70,7 @@
             </ul>
         </nav>
 
-        <main>
-            <section id="integrantes">
-                <article class="integrante">
-                    <div class="desc">
-                        <div>
-                            <h1 class="nome">Gabriel Henrique Gomes de Andrade</h1>
-                            <p class="integrante-info">Atualmente estudando Análise e Desenvolvimento de Sistemas na Uninassau.</p>
-                            <hr class="separator" />
-                            <div class="competencias">
-                                <header>Competências:</header>
-                                <ul>
-                                    <li>Ética e responsabilidade</li>
-                                    <li>Adaptabilidade</li>
-                                    <li>Gestão do tempo</li>
-                                </ul>
-                            </div>
-                            <div class="experiencias">
-                                <header>Experiências profissionais:</header>
-                                <ul>
-                                    <li>Trabalho em equipe</li>
-                                    <li>Estágio no DETRAN-PE por um breve período</li>
-                                </ul>
-                            </div>
-                            <div class="escolaridade">
-                                <header>Escolaridade:</header>
-                                <ul>
-                                    <li>Educação Superior (concluindo)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <figure class="img-container">
-                            <img class="profile" width="100%" src="assets/images/photo.jpg" alt="" />
-                            <figcaption>Gabriel Henrique</figcaption>
-                        </figure>
-                    </div>
-                </article>
-                <hr class="separator" />
-                <article class="integrante">
-                    <div class="desc">
-                        <div>
-                            <h1 class="nome">Caio Peixoto</h1>
-                            <p class="integrante-info">Atualmente estudando Análise e Desenvolvimento de Sistemas na Uninassau.</p>
-                            <hr class="separator" />
-                            <div class="competencias">
-                                <header>Competências:</header>
-                                <ul>
-                                    <li>Ética e responsabilidade</li>
-                                    <li>Adaptabilidade</li>
-                                    <li>Gestão do tempo</li>
-                                </ul>
-                            </div>
-                            <div class="experiencias">
-                                <header>Experiências profissionais:</header>
-                                <ul>
-                                    <li>Trabalho em equipe</li>
-                                    <li>Estágio no DETRAN-PE por um breve período</li>
-                                </ul>
-                            </div>
-                            <div class="escolaridade">
-                                <header>Escolaridade:</header>
-                                <ul>
-                                    <li>Educação Superior (concluindo)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <figure class="img-container">
-                            <img class="profile" width="100%" src="assets/images/photo.jpg" alt="" />
-                            <figcaption>Gabriel Henrique</figcaption>
-                        </figure>
-                    </div>
-                </article>
-                <hr class="separator" />
-                <article class="integrante">
-                    <div class="desc">
-                        <div>
-                            <h1 class="nome">Pedro Andrade</h1>
-                            <p class="integrante-info">Atualmente estudando Análise e Desenvolvimento de Sistemas na Uninassau.</p>
-                            <hr class="separator" />
-                            <div class="competencias">
-                                <header>Competências:</header>
-                                <ul>
-                                    <li>Ética e responsabilidade</li>
-                                    <li>Adaptabilidade</li>
-                                    <li>Gestão do tempo</li>
-                                </ul>
-                            </div>
-                            <div class="experiencias">
-                                <header>Experiências profissionais:</header>
-                                <ul>
-                                    <li>Trabalho em equipe</li>
-                                    <li>Estágio no DETRAN-PE por um breve período</li>
-                                </ul>
-                            </div>
-                            <div class="escolaridade">
-                                <header>Escolaridade:</header>
-                                <ul>
-                                    <li>Educação Superior (cursando)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <figure class="img-container">
-                            <img class="profile" width="100%" src="assets/images/photo.jpg" alt="" />
-                            <figcaption>Gabriel Henrique</figcaption>
-                        </figure>
-                    </div>
-                </article>
-            </section>
-            <section id="galeria">
-                <div style="background-image: url(./assets/images/gallery/1.png)">
-                    <span>Blade Runner 2049: JOI</span>
-                </div>
-                <div style="background-image: url(./assets/images/gallery/2.png)">
-                    <span>Blade Runner 2049: JOI & K</span>
-                </div>
-                <div style="background-image: url(./assets/images/gallery/3.png)">
-                    <span>Blade Runner 2049: K in the fog</span>
-                </div>
-                <div style="background-image: url(./assets/images/gallery/4.png)">
-                    <span>Blade Runner 2049: View from LA</span>
-                </div>
-                <div style="background-image: url(./assets/images/gallery/5.png)">
-                    <span>Blade Runner 2049: K</span>
-                </div>
-                <div style="background-image: url(./assets/images/gallery/6.png)">
-                    <span>Blade Runner 2049: K</span>
-                </div>
-            </section>
-            <section id="contato">
-                <article>
-                    <header>
-                        <h1>Entre em contato</h1>
-                        <p>Depois de enviar o formulário, entraremos em contato assim que possível!</p>
-                    </header>
-
-                    <form id="contate-nos">
-                        <input class="contato-input" placeholder="NOME" type="text" pattern="[a-zA-Z\s]+" required />
-                        <input class="contato-input" placeholder="EMAIL" type="email" required />
-                        <input class="contato-input" placeholder="TELEFONE" type="tel" pattern="[\d\s\+\-]+" required />
-
-                        <button id="contato-enviar" type="submit">Enviar</button>
-                    </form>
-                </article>
-            </section>
-        </main>
+        <main id="render"></main>
 
         <footer>
             <span>Trabalho de Desenvolvimento de Aplicações para Internet</span>
