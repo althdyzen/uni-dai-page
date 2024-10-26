@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/light.css" />
+        <link rel="stylesheet" href="assets/css/dark.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="assets/integrantes/members.js"></script>
+        <title>Trabalho 30-11-24</title>
+    </head>
+    <body>
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a class="nav-item" href="#integrantes">Sobre</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#galeria">Galeria</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#contato">Contato</a>
+                </li>
+                <li id="settings-item">
+                    <div>
+                        <input type="checkbox" name="settings" id="settings" hidden />
+                        <div id="settings-menu">
+                            <ul>
+                                <li>
+                                    <div id="theme-mode">
+                                        <input type="checkbox" name="theme" id="theme" hidden checked />
+                                        <label for="theme">
+                                            <span>Modo:</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">
+                                                <circle cx="12" cy="12" r="4" />
+                                                <path d="M12 2v2" />
+                                                <path d="M12 20v2" />
+                                                <path d="m4.93 4.93 1.41 1.41" />
+                                                <path d="m17.66 17.66 1.41 1.41" />
+                                                <path d="M2 12h2" />
+                                                <path d="M20 12h2" />
+                                                <path d="m6.34 17.66-1.41 1.41" />
+                                                <path d="m19.07 4.93-1.41 1.41" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="font-item">
+                                    <span>Scale:</span>
+                                    <div class="font-control">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14" /></svg><span id="font-size">16</span
+                                        ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus">
+                                            <path d="M5 12h14" />
+                                            <path d="M12 5v14" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>AAA</li>
+                            </ul>
+                        </div>
+                        <label for="settings">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings">
+                                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="integrantes">
+                <article class="integrante">
+                    <div class="desc">
+                        <div>
+                            <h1 class="nome">Gabriel Henrique Gomes de Andrade</h1>
+                            <p class="integrante-info">Atualmente estudando Análise e Desenvolvimento de Sistemas na Uninassau.</p>
+                            <hr class="separator" />
+                            <div class="competencias">
+                                <header>Competências:</header>
+                                <ul>
+                                    <li>Ética e responsabilidade</li>
+                                    <li>Adaptabilidade</li>
+                                    <li>Gestão do tempo</li>
+                                </ul>
+                            </div>
+                            <div class="experiencias">
+                                <header>Experiências profissionais:</header>
+                                <ul>
+                                    <li>Trabalho em equipe</li>
+                                    <li>Estágio no DETRAN-PE por um breve período</li>
+                                </ul>
+                            </div>
+                            <div class="escolaridade">
+                                <header>Escolaridade:</header>
+                                <ul>
+                                    <li>Educação Superior (concluindo)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <figure class="img-container">
+                            <img class="profile" width="100%" src="assets/images/photo.jpg" alt="" />
+                            <figcaption>Gabriel Henrique</figcaption>
+                        </figure>
+                    </div>
+                </article>
+                <hr class="separator" />
+                <article class="integrante">
+                    <div class="desc">
+                        <div>
+                            <h1 class="nome">Caio Peixoto</h1>
+                            <p class="integrante-info">Atualmente estudando Análise e Desenvolvimento de Sistemas na Uninassau.</p>
+                            <hr class="separator" />
+                            <div class="competencias">
+                                <header>Competências:</header>
+                                <ul>
+                                    <li>Ética e responsabilidade</li>
+                                    <li>Adaptabilidade</li>
+                                    <li>Gestão do tempo</li>
+                                </ul>
+                            </div>
+                            <div class="experiencias">
+                                <header>Experiências profissionais:</header>
+                                <ul>
+                                    <li>Trabalho em equipe</li>
+                                    <li>Estágio no DETRAN-PE por um breve período</li>
+                                </ul>
+                            </div>
+                            <div class="escolaridade">
+                                <header>Escolaridade:</header>
+                                <ul>
+                                    <li>Educação Superior (concluindo)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <figure class="img-container">
+                            <img class="profile" width="100%" src="assets/images/photo.jpg" alt="" />
+                            <figcaption>Gabriel Henrique</figcaption>
+                        </figure>
+                    </div>
+                </article>
+                <hr class="separator" />
+                <article class="integrante">
+                    <div class="desc">
+                        <div>
+                            <h1 class="nome">Pedro Andrade</h1>
+                            <p class="integrante-info">Atualmente estudando Análise e Desenvolvimento de Sistemas na Uninassau.</p>
+                            <hr class="separator" />
+                            <div class="competencias">
+                                <header>Competências:</header>
+                                <ul>
+                                    <li>Ética e responsabilidade</li>
+                                    <li>Adaptabilidade</li>
+                                    <li>Gestão do tempo</li>
+                                </ul>
+                            </div>
+                            <div class="experiencias">
+                                <header>Experiências profissionais:</header>
+                                <ul>
+                                    <li>Trabalho em equipe</li>
+                                    <li>Estágio no DETRAN-PE por um breve período</li>
+                                </ul>
+                            </div>
+                            <div class="escolaridade">
+                                <header>Escolaridade:</header>
+                                <ul>
+                                    <li>Educação Superior (cursando)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <figure class="img-container">
+                            <img class="profile" width="100%" src="assets/images/photo.jpg" alt="" />
+                            <figcaption>Gabriel Henrique</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <section id="galeria">
+                <div style="background-image: url(./assets/images/gallery/1.png)">
+                    <span>Blade Runner 2049: JOI</span>
+                </div>
+                <div style="background-image: url(./assets/images/gallery/2.png)">
+                    <span>Blade Runner 2049: JOI & K</span>
+                </div>
+                <div style="background-image: url(./assets/images/gallery/3.png)">
+                    <span>Blade Runner 2049: K in the fog</span>
+                </div>
+                <div style="background-image: url(./assets/images/gallery/4.png)">
+                    <span>Blade Runner 2049: View from LA</span>
+                </div>
+                <div style="background-image: url(./assets/images/gallery/5.png)">
+                    <span>Blade Runner 2049: K</span>
+                </div>
+                <div style="background-image: url(./assets/images/gallery/6.png)">
+                    <span>Blade Runner 2049: K</span>
+                </div>
+            </section>
+            <section id="contato">
+                <article>
+                    <header>
+                        <h1>Entre em contato</h1>
+                        <p>Depois de enviar o formulário, entraremos em contato assim que possível!</p>
+                    </header>
+
+                    <form id="contate-nos">
+                        <input class="contato-input" placeholder="NOME" type="text" pattern="[a-zA-Z\s]+" required />
+                        <input class="contato-input" placeholder="EMAIL" type="email" required />
+                        <input class="contato-input" placeholder="TELEFONE" type="tel" pattern="[\d\s\+\-]+" required />
+
+                        <button id="contato-enviar" type="submit">Enviar</button>
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <span>Trabalho de Desenvolvimento de Aplicações para Internet</span>
+            <p>Projeto de Frontend-Framework/Desenvolvimento Web/Web Coding, feito para o trabalho de Desenvolvimento de Aplicações para Internet</p>
+        </footer>
+
+        <div class="submitSucess">Enviado com sucesso!</div>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
