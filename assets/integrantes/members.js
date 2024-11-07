@@ -33,7 +33,7 @@ window.members = [
   },
   {
     name: 'Gabriel Henrique',
-    bio: 'Empreeendedor.',
+    bio: 'Atualmente, estou estudando Análise e Desenvolvimento de Sistemas',
     photo: 'assets/images/gabriel/img.jpg',
     skills: ['Capacidade de transmitir informações de forma objetiva e eficaz, facilitando a compreensão e a colaboração', 'Habilidade de absorver novos conhecimentos rapidamente, adaptando-me a diferentes contextos e tecnologias', 'Orientação para alcançar metas e objetivos, mantendo a qualidade e a eficiência nas atividades'],
     experiences: ['Atualmente, estou cursando Análise e Desenvolvimento de Sistemas, onde estou desenvolvendo uma base sólida em programação e desenvolvimento de software, além de participar de projetos práticos que enriquecem minha formação'],
