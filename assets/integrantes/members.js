@@ -25,11 +25,11 @@ window.members = [
   },
   {
     name: 'Maria dos Santos',
-    bio: 'Sou uma estudante entusiasmada, cursando Análise e Desenvolvimento de Sistemas, e tenho facilidade em comunicação e aprendizado. Sou extrovertida e me empenho muito em tudo que faço, sempre buscando novas oportunidades para crescer e me desenvolver',
+    bio: 'Olá, meu nome é Mariana santos tenho 19 anos . Estou cursando o segundo periodo da faculdade de analise e desenvolvimento de sistemas .sou uma pessoas que sei trabalhar muito bem em equipe , sou muito esforçada e organizada e sei me comunicar muito bem com as pessoas . Eu não  tenho experiência em nenhum área ainda pois sempre foquei  mais nos meus estudos',
     photo: 'assets/images/mariana/img.jpg',
-    skills: ['Flexibilidade para lidar com mudanças e novos desafios, ajustando-me rapidamente a diferentes situações', 'Iniciativa para identificar oportunidades de melhoria e agir de forma independente para alcançá-las', 'Desejo constante de aprender e explorar novos conhecimentos, especialmente na área de tecnologia'],
-    experiences: ['Atualmente, estou cursando Análise e Desenvolvimento de Sistemas, onde estou adquirindo conhecimentos técnicos e práticos que me preparam para desafios na área de tecnologia'],
-    education: 'Cursando ensino superior em Análise e Desenvolvimento de Sistemas, onde estou desenvolvendo habilidades essenciais para a minha futura carreira',
+    skills: ['Trabalho em equipe', 'Esforço e dedicação', 'Organização', 'Boa comunicação'],
+    experiences: ['Nenhuma experiência profissional até o momento (foco nos estudos)'],
+    education: 'Cursando o segundo período da faculdade de Análise e Desenvolvimento de Sistemas',
   },
   {
     name: 'Gabriel Henrique',
