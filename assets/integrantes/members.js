@@ -24,8 +24,8 @@ window.members = [
     education: 'Cursando ensino superior em Análise e Desenvolvimento de Sistemas, onde estou aprofundando meus conhecimentos técnicos e desenvolvendo habilidades que me permitirão contribuir de forma significativa na área de tecnologia',
   },
   {
-    name: 'Maria dos Santos',
-    bio: 'Olá, meu nome é Mariana santos tenho 19 anos . Estou cursando o segundo periodo da faculdade de analise e desenvolvimento de sistemas .sou uma pessoas que sei trabalhar muito bem em equipe , sou muito esforçada e organizada e sei me comunicar muito bem com as pessoas . Eu não  tenho experiência em nenhum área ainda pois sempre foquei  mais nos meus estudos',
+    name: 'Mariana dos Santos',
+    bio: 'Olá, meu nome é Mariana Santos tenho 19 anos. Estou cursando o segundo periodo da faculdade de Analise e Desenvolvimento de Sistemas. Sou uma pessoas que sei trabalhar muito bem em equipe, sou muito esforçada e organizada e sei me comunicar muito bem com as pessoas . Eu não tenho experiência em nenhum área ainda pois sempre foquei mais nos meus estudos',
     photo: 'assets/images/mariana/img.jpg',
     skills: ['Trabalho em equipe', 'Esforço e dedicação', 'Organização', 'Boa comunicação'],
     experiences: ['Nenhuma experiência profissional até o momento (foco nos estudos)'],
