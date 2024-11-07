@@ -174,6 +174,7 @@ const settingsToggle = () => {
   const settings = document.getElementById('settings-item');
   settings.addEventListener('click', ev => {
     ev.preventDefault();
+    ev.stopImmediatePropagation();
     if (!ev.target.closest('#settings-menu')) {
       document.body.classList.toggle('settingsShow');
     }
