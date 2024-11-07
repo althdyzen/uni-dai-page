@@ -95,10 +95,10 @@ const contactOnSubmit = () => {
 const renderItem = array => array.map(item => `<li>${item}</li>`).join('\n');
 
 // Função que renderiza as informações de um membro em HTML, incluindo nome, bio, foto, etc.
-const renderMember = props => {
+const renderMember = (props, index) => {
   const { name, bio, photo, skills, experiences, education } = props;
   return `
-    <hr class="separator" />
+    ${index !== 0 ? '<hr class="separator" />' : ''}
     <article class="integrante">
         <div class="desc">
             <div>
@@ -138,8 +138,8 @@ const renderMembers = () => {
   const members = window.members; // Array global de membros
   const container = document.getElementById('sobre'); // Container para os membros
   if (container) {
-    members.forEach(member => {
-      container.insertAdjacentHTML('beforeend', renderMember(member));
+    members.forEach((member, index) => {
+      container.insertAdjacentHTML('beforeend', renderMember(member, index));
     });
   }
 };
@@ -193,15 +193,19 @@ const hashLink = () => {
   });
 };
 
+// Remove o skeleton de carregamento
+const hideSkeleton = () => {
+  const skeleton = document.getElementById('skeleton');
+  skeleton?.remove();
+};
+
 // Função que muda o conteúdo da página com base no hash atual da URL
 const changePage = () => {
   const pageType = getHash(); // Tipo de página a ser exibida
   const pageUse = pages.find(page => page.type === pageType); // Página correspondente
 
-  console.log(pageUse, pages);
-
   if (getHash() === '') {
-    render.innerHTML = pages[0].html; // Exibe a página padrão
+    window.location.hash = '#sobre';
     return;
   }
 
@@ -211,6 +215,7 @@ const changePage = () => {
   }
   if (pageUse.type === 'sobre') {
     renderMembers();
+    hideSkeleton(); // Remove o skeleton de carregamento
   }
   hashLink();
 };
