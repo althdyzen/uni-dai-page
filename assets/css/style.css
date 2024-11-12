@@ -19,7 +19,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding: 5rem;
 
-    min-height: 100dvh;
+    /* min-height: 100dvh; */
 }
 
 body {
