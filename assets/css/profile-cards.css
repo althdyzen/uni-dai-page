@@ -1,0 +1,43 @@
+@media screen and (min-width: 900px) {
+    #sobre {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        > .integrante {
+            flex-basis: calc(33% - 1rem);
+            width: auto;
+        }
+
+        > hr {
+            display: none;
+        }
+    }
+
+    .img-container {
+        max-height: 32rem;
+        min-height: 32rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .desc {
+        flex-flow: column-reverse;
+        gap: 0;
+
+        & > div:not([class]) {
+            min-height: 48rem;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        & > div[class] {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    figcaption {
+        display: none;
+    }
+}
