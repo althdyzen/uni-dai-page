@@ -261,14 +261,12 @@ const loadPages = async () => {
     const promises = pages.map(async (page, i) => {
         const res = await fetch(page.path); // Faz uma requisição para obter o conteúdo da página
         const resText = await res.text(); // Converte a resposta para texto
-        // console.log(resText);
         pages[i].html = resText; // Armazena o conteúdo HTML na propriedade html
     });
     await Promise.all(promises); // Aguarda que todas as páginas sejam carregadas
     changePage(); // Exibe a primeira página após o carregamento
 };
 
-// setTimeout(() => loadPages(), 50000);
 loadPages(); // Chamada inicial para carregar as páginas
 
 // Adiciona o evento `hashchange` para alterar a página ao mudar o hash da URL
