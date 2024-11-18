@@ -213,10 +213,11 @@ label {
 }
 
 .img-container {
+    position: relative;
+
     display: flex;
     flex-flow: column;
     align-items: center;
-    /* max-width: 700px; */
     max-height: 43.75rem;
     aspect-ratio: 1;
 
@@ -226,6 +227,18 @@ label {
     border: 2px solid var(--md-sys-color-outline-variant);
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transition: background-color 0.3s ease;
+    }
+
+    &:hover::before {
+        background-color: rgba(0 0 0 / 40%);
+        cursor: pointer;
+    }
 }
 
 img.profile {
